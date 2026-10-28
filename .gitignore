@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+
+# Large third-party data that is NOT redistributed (see data/README.md)
+data/scryfall_universe.csv
+data/MagicCompRules_*.txt
+data/oracle-cards-*.json
+
+# Generated build artefacts
+pool.csv
+pool_tagged.csv
+*.log
