@@ -1,0 +1,1274 @@
+{
+ "meta": {
+  "data_fingerprint": {
+   "pool_rows": 2208,
+   "parent_rows": 8438,
+   "universe_rows": 31830,
+   "rules_rows": 9397,
+   "hash": "064f912f",
+   "captured": "2026-09-15"
+  }
+ },
+ "carried_from_strategy": [
+  {
+   "name": "Ocelot Pride",
+   "disposition": "shortlisted",
+   "reason": "Recurring Cat tokens on a one-drop body; kept in body_count."
+  },
+  {
+   "name": "Sacred Cat",
+   "disposition": "shortlisted",
+   "reason": "Two bodies from one card through embalm; kept in body_count."
+  },
+  {
+   "name": "Adorned Pouncer",
+   "disposition": "shortlisted",
+   "reason": "Double strike now and a second body later; kept in body_count."
+  },
+  {
+   "name": "Prideful Parent",
+   "disposition": "shortlisted",
+   "reason": "Two bodies on arrival; kept in body_count."
+  },
+  {
+   "name": "Pride Sovereign",
+   "disposition": "shortlisted",
+   "reason": "Repeatable two-token activation; kept in body_count."
+  },
+  {
+   "name": "Regal Caracal",
+   "disposition": "shortlisted",
+   "reason": "Three bodies plus the lifelink that switches on other triggers; kept in body_count."
+  },
+  {
+   "name": "Leonin Warleader",
+   "disposition": "shortlisted",
+   "reason": "Two attacking tokens per combat; kept in body_count."
+  },
+  {
+   "name": "Ajani's Chosen",
+   "disposition": "shortlisted",
+   "reason": "A 2/2 Cat per enchantment, and the deck runs eight enchantments; kept in body_count."
+  },
+  {
+   "name": "Esika's Chariot",
+   "disposition": "shortlisted",
+   "reason": "Two bodies plus a token copy per attack; kept in token_engines."
+  },
+  {
+   "name": "Felidar Retreat",
+   "disposition": "shortlisted",
+   "reason": "A Cat Beast per land drop; kept in token_engines."
+  },
+  {
+   "name": "Waiting in the Weeds",
+   "disposition": "benched",
+   "reason": "Needs untapped Forests at sorcery speed and hands the table Cats too; lost the flex slot to Second Harvest."
+  },
+  {
+   "name": "Firecat Blitz",
+   "disposition": "benched",
+   "reason": "Its tokens are sacrificed at end of turn, so they buy one combat and no threshold after it."
+  },
+  {
+   "name": "Second Harvest",
+   "disposition": "shortlisted",
+   "reason": "Instant-speed doubling of the token half of the board; taken in flex."
+  },
+  {
+   "name": "Caretaker's Talent",
+   "disposition": "shortlisted",
+   "reason": "Draws on token arrival and copies a token at level two; kept in token_engines."
+  },
+  {
+   "name": "Mirror March",
+   "disposition": "shortlisted",
+   "reason": "Kept in token_engines as the sixth and weakest slot, and flagged as such."
+  },
+  {
+   "name": "Mirrorpool",
+   "disposition": "dropped",
+   "reason": "Adds colourless only, so it fails the land package criterion, and its copy mode is a spell copy rather than a body."
+  },
+  {
+   "name": "Teferi's Protection",
+   "disposition": "shortlisted",
+   "reason": "The widest sweeper answer in the pool; kept in wipe_insurance."
+  },
+  {
+   "name": "Great Train Heist",
+   "disposition": "shortlisted",
+   "reason": "The one affordable extra combat; kept in damage_conversion."
+  },
+  {
+   "name": "Grim Reaper's Sprint",
+   "disposition": "dropped",
+   "reason": "Five mana for an Aura, discounted only if a creature died, and the untap it offers is already covered."
+  },
+  {
+   "name": "Biorhythm",
+   "disposition": "shortlisted",
+   "reason": "The only non-combat kill in the pool; kept in damage_conversion."
+  }
+ ],
+ "budget": {
+  "body_count": {
+   "target": 21,
+   "weakness_ref": "W1",
+   "criterion": "Puts at least one Cat body on the battlefield per card; ties break toward two-or-more bodies or a body that replaces itself",
+   "shortlist_query": {
+    "field": "type_line",
+    "pattern": "Creature"
+   },
+   "ordering_key": "bodies produced per card, then edhrec_rank ascending"
+  },
+  "token_engines": {
+   "target": 6,
+   "weakness_ref": "W1",
+   "criterion": "A noncreature permanent that creates a Cat creature token, copy effects included",
+   "shortlist_query": {
+    "field": "oracle_text",
+    "pattern": "creat\\w* .{0,45}(creature )?token"
+   },
+   "ordering_key": "tokens per turn once online, then edhrec_rank ascending"
+  },
+  "wipe_insurance": {
+   "target": 5,
+   "weakness_ref": "W2",
+   "criterion": "Instant speed, and either saves the whole board or returns it; sorcery-speed rebuilds fail",
+   "shortlist_query": {
+    "field": "oracle_text",
+    "pattern": "(permanents|creatures) you control (gain|have)[^.]*(indestructible|hexproof)"
+   },
+   "ordering_key": "breadth of what it saves, then mana cost ascending"
+  },
+  "commander_insurance": {
+   "target": 4,
+   "weakness_ref": "W3",
+   "criterion": "Instant speed, two mana or less, protects one permanent from targeted removal",
+   "shortlist_query": {
+    "field": "oracle_text",
+    "pattern": "(gains?|have) (hexproof|indestructible|protection from)"
+   },
+   "ordering_key": "mana cost ascending, then whether it also survives a sweeper"
+  },
+  "damage_conversion": {
+   "target": 7,
+   "weakness_ref": "W4",
+   "criterion": "Turns an existing board into lethal this turn: mass pump beyond Jetmir's tiers, evasion, haste, extra combat, or non-combat reach",
+   "shortlist_query": {
+    "field": "oracle_text",
+    "pattern": "creatures you control get \\+|additional combat phase|deals \\d+ damage to each opponent"
+   },
+   "ordering_key": "extra damage per attacker at nine bodies, then mana cost ascending"
+  },
+  "interaction": {
+   "target": 7,
+   "weakness_ref": "W4",
+   "criterion": "Instant-speed answer to a permanent that blanks an attack",
+   "shortlist_query": {
+    "field": "oracle_text",
+    "pattern": "(destroy|exile) target (creature|permanent|artifact|nonland)"
+   },
+   "ordering_key": "mana cost ascending, then breadth of targets"
+  },
+  "refuel": {
+   "target": 5,
+   "weakness_ref": "W6",
+   "criterion": "Draws two or more cards, or refills from an emptied hand",
+   "shortlist_query": {
+    "field": "oracle_text",
+    "pattern": "draw (two|three|\\w+) cards|draw a card for each"
+   },
+   "ordering_key": "cards drawn at a board of six, then mana cost ascending"
+  },
+  "ramp": {
+   "target": 8,
+   "weakness_ref": "W5",
+   "criterion": "Noncreature; adds mana or an extra land drop, on curve before turn 4",
+   "shortlist_query": {
+    "field": "tags",
+    "pattern": "mana_burst|mana_land_drop"
+   },
+   "ordering_key": "mana cost ascending, then whether it fixes the third colour"
+  },
+  "lands_nonbasic": {
+   "target": 22,
+   "weakness_ref": "W5",
+   "criterion": "Produces two or more of GRW, or produces one and does something else in the plan",
+   "shortlist_query": {
+    "field": "type_line",
+    "pattern": "Land"
+   },
+   "ordering_key": "colours produced, then how often it enters untapped"
+  },
+  "flex": {
+   "target": 2,
+   "weakness_ref": "W1",
+   "flex": true,
+   "criterion": "Held open for what pool extraction finds next turn",
+   "shortlist_query": {
+    "field": "oracle_text",
+    "pattern": "token"
+   },
+   "ordering_key": "effect on the turn the deck commits"
+  }
+ },
+ "candidates": [
+  {
+   "name": "Ocelot Pride",
+   "package": "body_count",
+   "refs": [
+    "W1",
+    "L1"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Sacred Cat",
+   "package": "body_count",
+   "refs": [
+    "W1",
+    "L1"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Wild Nacatl",
+   "package": "body_count",
+   "refs": [
+    "W1",
+    "L1"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Ajani, Nacatl Pariah // Ajani, Nacatl Avenger",
+   "package": "body_count",
+   "refs": [
+    "W1",
+    "L1"
+   ],
+   "mode_taken": "Ajani, Nacatl Pariah"
+  },
+  {
+   "name": "Adorned Pouncer",
+   "package": "body_count",
+   "refs": [
+    "W1",
+    "L2"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Kemba, Kha Enduring",
+   "package": "body_count",
+   "refs": [
+    "W1",
+    "L1"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Qasali Pridemage",
+   "package": "body_count",
+   "refs": [
+    "W1",
+    "W4"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Arahbo, the First Fang",
+   "package": "body_count",
+   "refs": [
+    "W1",
+    "L2"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Prideful Parent",
+   "package": "body_count",
+   "refs": [
+    "W1",
+    "L2"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Pride Sovereign",
+   "package": "body_count",
+   "refs": [
+    "W1",
+    "L3"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Feline Sovereign",
+   "package": "body_count",
+   "refs": [
+    "W1",
+    "W4"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "King of the Pride",
+   "package": "body_count",
+   "refs": [
+    "W1",
+    "L3"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Brimaz, King of Oreskos",
+   "package": "body_count",
+   "refs": [
+    "W1",
+    "L3"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Kutzil, Malamet Exemplar",
+   "package": "body_count",
+   "refs": [
+    "W4",
+    "L3"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Mirri, Weatherlight Duelist",
+   "package": "body_count",
+   "refs": [
+    "W4",
+    "L3"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Kaheera, the Orphanguard",
+   "package": "body_count",
+   "refs": [
+    "W1",
+    "L2"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Regal Caracal",
+   "package": "body_count",
+   "refs": [
+    "W1",
+    "L3"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Leonin Warleader",
+   "package": "body_count",
+   "refs": [
+    "W1",
+    "L3"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Ajani's Chosen",
+   "package": "body_count",
+   "refs": [
+    "W1",
+    "L3"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Nacatl War-Pride",
+   "package": "body_count",
+   "refs": [
+    "W1",
+    "L3"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Marisi, Breaker of the Coil",
+   "package": "body_count",
+   "refs": [
+    "W4",
+    "L3"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Jedit Ojanen of Efrava",
+   "package": "body_count",
+   "refs": [
+    "W1"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Savannah Lions",
+   "package": "body_count",
+   "refs": [
+    "W1"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Fleecemane Lion",
+   "package": "body_count",
+   "refs": [
+    "W1"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Bronzehide Lion",
+   "package": "body_count",
+   "refs": [
+    "W1"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Penumbra Bobcat",
+   "package": "body_count",
+   "refs": [
+    "W1"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Felidar Sovereign",
+   "package": "body_count",
+   "refs": [
+    "W1"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Esika's Chariot",
+   "package": "token_engines",
+   "refs": [
+    "W1",
+    "W2"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Felidar Retreat",
+   "package": "token_engines",
+   "refs": [
+    "W1",
+    "W2"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Anointed Procession",
+   "package": "token_engines",
+   "refs": [
+    "W1",
+    "L3"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Caretaker's Talent",
+   "package": "token_engines",
+   "refs": [
+    "W1",
+    "W6"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Renewed Solidarity",
+   "package": "token_engines",
+   "refs": [
+    "W1",
+    "W2"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Mirror March",
+   "package": "token_engines",
+   "refs": [
+    "W1",
+    "L3"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Adagia, Windswept Bastion",
+   "package": "token_engines",
+   "refs": [
+    "W1"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "God-Pharaoh's Gift",
+   "package": "token_engines",
+   "refs": [
+    "W1"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Teferi's Protection",
+   "package": "wipe_insurance",
+   "refs": [
+    "W2",
+    "L2"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Heroic Intervention",
+   "package": "wipe_insurance",
+   "refs": [
+    "W2",
+    "L2"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Flare of Fortitude",
+   "package": "wipe_insurance",
+   "refs": [
+    "W2",
+    "L2"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Make a Stand",
+   "package": "wipe_insurance",
+   "refs": [
+    "W2",
+    "L3"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Your Temple Is Under Attack",
+   "package": "wipe_insurance",
+   "refs": [
+    "W2",
+    "W6"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Everybody Lives!",
+   "package": "wipe_insurance",
+   "refs": [
+    "W2"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Duty Beyond Death",
+   "package": "wipe_insurance",
+   "refs": [
+    "W2"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Chance for Glory",
+   "package": "wipe_insurance",
+   "refs": [
+    "W2"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Snakeskin Veil",
+   "package": "commander_insurance",
+   "refs": [
+    "W3",
+    "L2"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Tamiyo's Safekeeping",
+   "package": "commander_insurance",
+   "refs": [
+    "W3",
+    "L2"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Tyvar's Stand",
+   "package": "commander_insurance",
+   "refs": [
+    "W3",
+    "L2"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Gods Willing",
+   "package": "commander_insurance",
+   "refs": [
+    "W3",
+    "L2"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Emerge Unscathed",
+   "package": "commander_insurance",
+   "refs": [
+    "W3"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Sejiri Shelter // Sejiri Glacier",
+   "package": "commander_insurance",
+   "refs": [
+    "W3"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Rebuff the Wicked",
+   "package": "commander_insurance",
+   "refs": [
+    "W3"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Jazal Goldmane",
+   "package": "damage_conversion",
+   "refs": [
+    "W4",
+    "L3"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Great Train Heist",
+   "package": "damage_conversion",
+   "refs": [
+    "W4",
+    "L3"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Return of the Wildspeaker",
+   "package": "damage_conversion",
+   "refs": [
+    "W4",
+    "L3"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Makindi Stampede // Makindi Mesas",
+   "package": "damage_conversion",
+   "refs": [
+    "W4",
+    "L3"
+   ],
+   "mode_taken": "Makindi Stampede"
+  },
+  {
+   "name": "Impact Tremors",
+   "package": "damage_conversion",
+   "refs": [
+    "W4",
+    "L5"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Lightning Greaves",
+   "package": "damage_conversion",
+   "refs": [
+    "W3",
+    "L3"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Biorhythm",
+   "package": "damage_conversion",
+   "refs": [
+    "W4",
+    "L4"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Overrun",
+   "package": "damage_conversion",
+   "refs": [
+    "W4"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "For the Emperor!",
+   "package": "damage_conversion",
+   "refs": [
+    "W4"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Haze of Rage",
+   "package": "damage_conversion",
+   "refs": [
+    "W4"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Swords to Plowshares",
+   "package": "interaction",
+   "refs": [
+    "W4",
+    "L3"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Path to Exile",
+   "package": "interaction",
+   "refs": [
+    "W4",
+    "L3"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Beast Within",
+   "package": "interaction",
+   "refs": [
+    "W4",
+    "L3"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Generous Gift",
+   "package": "interaction",
+   "refs": [
+    "W4",
+    "L3"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Krosan Grip",
+   "package": "interaction",
+   "refs": [
+    "W4",
+    "L3"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Nature's Claim",
+   "package": "interaction",
+   "refs": [
+    "W4",
+    "L3"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Abrade",
+   "package": "interaction",
+   "refs": [
+    "W4",
+    "L3"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Stroke of Midnight",
+   "package": "interaction",
+   "refs": [
+    "W4"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Collective Resistance",
+   "package": "interaction",
+   "refs": [
+    "W4"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Return to Nature",
+   "package": "interaction",
+   "refs": [
+    "W4"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Garruk's Uprising",
+   "package": "refuel",
+   "refs": [
+    "W6",
+    "L3"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Shamanic Revelation",
+   "package": "refuel",
+   "refs": [
+    "W6",
+    "L3"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Harmonize",
+   "package": "refuel",
+   "refs": [
+    "W6",
+    "L1"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Rishkar's Expertise",
+   "package": "refuel",
+   "refs": [
+    "W6",
+    "L3"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Skullclamp",
+   "package": "refuel",
+   "refs": [
+    "W6",
+    "W2"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Camaraderie",
+   "package": "refuel",
+   "refs": [
+    "W6"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Smuggler's Share",
+   "package": "refuel",
+   "refs": [
+    "W6"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Vanquisher's Banner",
+   "package": "refuel",
+   "refs": [
+    "W6"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Sol Ring",
+   "package": "ramp",
+   "refs": [
+    "W5",
+    "L1"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Arcane Signet",
+   "package": "ramp",
+   "refs": [
+    "W5",
+    "L1"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Rampant Growth",
+   "package": "ramp",
+   "refs": [
+    "W5",
+    "L1"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Nature's Lore",
+   "package": "ramp",
+   "refs": [
+    "W5",
+    "L1"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Three Visits",
+   "package": "ramp",
+   "refs": [
+    "W5",
+    "L1"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Cultivate",
+   "package": "ramp",
+   "refs": [
+    "W5",
+    "L1"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Kodama's Reach",
+   "package": "ramp",
+   "refs": [
+    "W5",
+    "L1"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Mind Stone",
+   "package": "ramp",
+   "refs": [
+    "W5",
+    "W6"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Commander's Sphere",
+   "package": "ramp",
+   "refs": [
+    "W5"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Wayfarer's Bauble",
+   "package": "ramp",
+   "refs": [
+    "W5"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Chromatic Lantern",
+   "package": "ramp",
+   "refs": [
+    "W5"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Command Tower",
+   "package": "lands_nonbasic",
+   "refs": [
+    "W5",
+    "L2"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Jetmir's Garden",
+   "package": "lands_nonbasic",
+   "refs": [
+    "W5",
+    "L2"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Jungle Shrine",
+   "package": "lands_nonbasic",
+   "refs": [
+    "W5",
+    "L2"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Exotic Orchard",
+   "package": "lands_nonbasic",
+   "refs": [
+    "W5",
+    "L2"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Path of Ancestry",
+   "package": "lands_nonbasic",
+   "refs": [
+    "W5",
+    "L1"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Clifftop Retreat",
+   "package": "lands_nonbasic",
+   "refs": [
+    "W5",
+    "L2"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Rootbound Crag",
+   "package": "lands_nonbasic",
+   "refs": [
+    "W5",
+    "L2"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Sunpetal Grove",
+   "package": "lands_nonbasic",
+   "refs": [
+    "W5",
+    "L2"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Canopy Vista",
+   "package": "lands_nonbasic",
+   "refs": [
+    "W5",
+    "L2"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Cinder Glade",
+   "package": "lands_nonbasic",
+   "refs": [
+    "W5",
+    "L2"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Battlefield Forge",
+   "package": "lands_nonbasic",
+   "refs": [
+    "W5",
+    "L2"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Hushwood Verge",
+   "package": "lands_nonbasic",
+   "refs": [
+    "W5",
+    "L2"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Fortified Village",
+   "package": "lands_nonbasic",
+   "refs": [
+    "W5",
+    "L2"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Game Trail",
+   "package": "lands_nonbasic",
+   "refs": [
+    "W5",
+    "L2"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Furycalm Snarl",
+   "package": "lands_nonbasic",
+   "refs": [
+    "W5",
+    "L2"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Branchloft Pathway // Boulderloft Pathway",
+   "package": "lands_nonbasic",
+   "refs": [
+    "W5",
+    "L2"
+   ],
+   "mode_taken": "Branchloft Pathway"
+  },
+  {
+   "name": "Cragcrown Pathway // Timbercrown Pathway",
+   "package": "lands_nonbasic",
+   "refs": [
+    "W5",
+    "L2"
+   ],
+   "mode_taken": "Timbercrown Pathway"
+  },
+  {
+   "name": "Rugged Prairie",
+   "package": "lands_nonbasic",
+   "refs": [
+    "W5",
+    "L2"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Spire Garden",
+   "package": "lands_nonbasic",
+   "refs": [
+    "W5",
+    "L2"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Sheltered Thicket",
+   "package": "lands_nonbasic",
+   "refs": [
+    "W5",
+    "L1"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Three Tree City",
+   "package": "lands_nonbasic",
+   "refs": [
+    "W5",
+    "L3"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Secluded Courtyard",
+   "package": "lands_nonbasic",
+   "refs": [
+    "W5",
+    "L1"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Evolving Wilds",
+   "package": "lands_nonbasic",
+   "refs": [
+    "W5"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Windswept Heath",
+   "package": "lands_nonbasic",
+   "refs": [
+    "W5"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Rogue's Passage",
+   "package": "lands_nonbasic",
+   "refs": [
+    "W5"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Mossfire Valley",
+   "package": "lands_nonbasic",
+   "refs": [
+    "W5"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Spectator Seating",
+   "package": "lands_nonbasic",
+   "refs": [
+    "W5"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Radiant Grove",
+   "package": "lands_nonbasic",
+   "refs": [
+    "W5"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Second Harvest",
+   "package": "flex",
+   "refs": [
+    "W1",
+    "L3"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Smothering Tithe",
+   "package": "flex",
+   "refs": [
+    "W5",
+    "W6"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Waiting in the Weeds",
+   "package": "flex",
+   "refs": [
+    "W1"
+   ],
+   "mode_taken": null
+  },
+  {
+   "name": "Firecat Blitz",
+   "package": "flex",
+   "refs": [
+    "W1"
+   ],
+   "mode_taken": null
+  }
+ ]
+}

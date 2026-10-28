@@ -1,0 +1,1588 @@
+{
+ "commander": "Jetmir, Nexus of Revels",
+ "color_identity": "GRW",
+ "restriction": "Each creature card in the 99 must be a Cat, changelings excluded, and each creature token created under my control must be a Cat.",
+ "data_fingerprint": {
+  "pool_rows": 2208,
+  "parent_rows": 8438,
+  "universe_rows": 31830,
+  "rules_rows": 9397,
+  "hash": "064f912f",
+  "captured": "2026-09-15"
+ },
+ "budget": {
+  "body_count": {
+   "target": 21,
+   "weakness_ref": "W1",
+   "criterion": "Puts at least one Cat body on the battlefield per card; ties break toward two-or-more bodies or a body that replaces itself"
+  },
+  "token_engines": {
+   "target": 6,
+   "weakness_ref": "W1",
+   "criterion": "A noncreature permanent that creates a Cat creature token, copy effects included"
+  },
+  "wipe_insurance": {
+   "target": 5,
+   "weakness_ref": "W2",
+   "criterion": "Instant speed, and either saves the whole board or returns it; sorcery-speed rebuilds fail"
+  },
+  "commander_insurance": {
+   "target": 4,
+   "weakness_ref": "W3",
+   "criterion": "Instant speed, two mana or less, protects one permanent from targeted removal"
+  },
+  "damage_conversion": {
+   "target": 7,
+   "weakness_ref": "W4",
+   "criterion": "Turns an existing board into lethal this turn: mass pump beyond Jetmir's tiers, evasion, haste, extra combat, or non-combat reach"
+  },
+  "interaction": {
+   "target": 7,
+   "weakness_ref": "W4",
+   "criterion": "Instant-speed answer to a permanent that blanks an attack"
+  },
+  "refuel": {
+   "target": 5,
+   "weakness_ref": "W6",
+   "criterion": "Draws two or more cards, or refills from an emptied hand"
+  },
+  "ramp": {
+   "target": 8,
+   "weakness_ref": "W5",
+   "criterion": "Noncreature; adds mana or an extra land drop, on curve before turn 4"
+  },
+  "lands_nonbasic": {
+   "target": 22,
+   "weakness_ref": "W5",
+   "criterion": "Produces two or more of GRW, or produces one and does something else in the plan"
+  },
+  "flex": {
+   "target": 2,
+   "weakness_ref": "W1",
+   "flex": true,
+   "criterion": "Held open for what pool extraction finds next turn"
+  }
+ },
+ "weakness_rows": {
+  "W1": "Tier three needs nine creatures; body supply is 121 Cat creature cards plus twelve noncreature Cat-token makers, and 23 pool cards make a Cat token.",
+  "W2": "A sweeper costs more card economy here than against a fair deck, because the board is many individually weak cards.",
+  "W3": "Jetmir has no entry trigger and no self-protection, so he is the single point of failure; tax runs 4 / 6 / 8 / 10 under CR 903.8.",
+  "W4": "The plan is one alpha strike, which a single Fog or an attack tax blanks; a second combat phase is two cards deep in the pool.",
+  "W5": "Creature ramp and creature tutors are unavailable, since a mana creature outside the Cat subtype is not legal.",
+  "W6": "Go-wide empties the hand, and draw that scales with creature count is four cards against 292 generic draw."
+ },
+ "play_lines": {
+  "L1": "Turns 1-3: noncreature ramp and cheap recurring Cats; hold back from deploying into an open sweeper if the board is already at three.",
+  "L2": "Turn 4-5: land the commander with a protection card up, or with six bodies already present so the anthem is immediately lethal-relevant.",
+  "L3": "Turn 6-7: cross nine creatures with a token engine, remove the one taxer or blocker that blanks the swing, then attack.",
+  "L4": "If the commander is answered twice, stop recasting at eight and win through mass pump plus the non-combat ender rather than through the third tier.",
+  "L5": "Against a table holding 2.8 live answers, split the alpha strike across two opponents rather than overkilling one."
+ },
+ "package_notes": {
+  "body_count": "Twenty-one slots: the third tier reads nine creatures, and the pool holds 121 Cat creature cards against 2,087 noncreature cards. The criterion is bodies per card, not stats per card. Answers W1.",
+  "token_engines": "Six slots, the hardest to fill: just 23 pool cards make a Cat token. The rest rests on the plan-turn finding that a copy of a Cat is a Cat, which widens it to doublers. Answers W1 and W2.",
+  "wipe_insurance": "Five slots, sized against 2.8 live answers on the commit turn - one saving effect is under-built. Instant speed and board-wide by criterion. Answers W2.",
+  "commander_insurance": "Four slots at one or two mana. The commander has no entry trigger and no self-protection, and a tax of 4 / 6 / 8 / 10 makes a third cast a lost turn. Answers W3.",
+  "damage_conversion": "Seven slots to close link six: eight attackers at the third tier deal 64, killing two opponents out of three. Answers W4.",
+  "interaction": "Seven slots aimed at permanents that blank an attack - taxers, large blockers, hosers - not at threats in general. Instant speed. Answers W4.",
+  "refuel": "Five slots: creature-count-scaling draw is four cards in the pool, so two of those plus three generic pieces that work from an empty board. Answers W6.",
+  "ramp": "Eight slots, noncreature by force - a mana creature outside the Cat subtype is not legal. The pool replaces the function whole. Answers W5.",
+  "lands_nonbasic": "Twenty-two slots. The criterion cost the deck its fetchlands, which produce no mana of their own on the turn played; I kept it rather than widening it after seeing the cards. Answers W5.",
+  "flex": "Two slots held from the plan turn, spent on an instant-speed token doubler and a Treasure engine that pays the commander tax. Answers W1 and W5."
+ },
+ "deck": [
+  {
+   "name": "Ocelot Pride",
+   "count": 1,
+   "mana_cost": "{W}",
+   "type_line": "Creature — Cat",
+   "package": "body_count",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W1",
+    "L1"
+   ],
+   "beat": "Jedit Ojanen of Efrava",
+   "note": "Lifelink on the lords turns the end-step trigger on, and the city's blessing turns it into a doubler for each token that entered that turn."
+  },
+  {
+   "name": "Sacred Cat",
+   "count": 1,
+   "mana_cost": "{W}",
+   "type_line": "Creature — Cat",
+   "package": "body_count",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W1",
+    "L1"
+   ],
+   "beat": "Savannah Lions"
+  },
+  {
+   "name": "Wild Nacatl",
+   "count": 1,
+   "mana_cost": "{G}",
+   "type_line": "Creature — Cat Warrior",
+   "package": "body_count",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W1",
+    "L1"
+   ],
+   "beat": "Fleecemane Lion"
+  },
+  {
+   "name": "Ajani, Nacatl Pariah // Ajani, Nacatl Avenger",
+   "count": 1,
+   "mana_cost": "{1}{W}",
+   "type_line": "Legendary Creature — Cat Warrior // Legendary Planeswalker — Ajani",
+   "package": "body_count",
+   "roles_secondary": [],
+   "mode_taken": "Ajani, Nacatl Pariah",
+   "refs": [
+    "W1",
+    "L1"
+   ],
+   "beat": "Bronzehide Lion"
+  },
+  {
+   "name": "Adorned Pouncer",
+   "count": 1,
+   "mana_cost": "{1}{W}",
+   "type_line": "Creature — Cat",
+   "package": "body_count",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W1",
+    "L2"
+   ],
+   "beat": "Penumbra Bobcat"
+  },
+  {
+   "name": "Kemba, Kha Enduring",
+   "count": 1,
+   "mana_cost": "{1}{W}",
+   "type_line": "Legendary Creature — Cat Cleric",
+   "package": "body_count",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W1",
+    "L1"
+   ],
+   "beat": "Felidar Sovereign"
+  },
+  {
+   "name": "Qasali Pridemage",
+   "count": 1,
+   "mana_cost": "{G}{W}",
+   "type_line": "Creature — Cat Wizard",
+   "package": "body_count",
+   "roles_secondary": [
+    "interaction"
+   ],
+   "mode_taken": null,
+   "refs": [
+    "W1",
+    "W4"
+   ],
+   "beat": "Jedit Ojanen of Efrava"
+  },
+  {
+   "name": "Arahbo, the First Fang",
+   "count": 1,
+   "mana_cost": "{2}{W}",
+   "type_line": "Legendary Creature — Cat Avatar",
+   "package": "body_count",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W1",
+    "L2"
+   ],
+   "beat": "Savannah Lions",
+   "note": "Each nontoken Cat cast afterwards arrives with a second body attached, which converts one card into two toward the thresholds."
+  },
+  {
+   "name": "Prideful Parent",
+   "count": 1,
+   "mana_cost": "{2}{W}",
+   "type_line": "Creature — Cat",
+   "package": "body_count",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W1",
+    "L2"
+   ],
+   "beat": "Fleecemane Lion"
+  },
+  {
+   "name": "Pride Sovereign",
+   "count": 1,
+   "mana_cost": "{2}{G}",
+   "type_line": "Creature — Cat",
+   "package": "body_count",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W1",
+    "L3"
+   ],
+   "beat": "Bronzehide Lion"
+  },
+  {
+   "name": "Feline Sovereign",
+   "count": 1,
+   "mana_cost": "{2}{G}",
+   "type_line": "Creature — Cat",
+   "package": "body_count",
+   "roles_secondary": [
+    "interaction"
+   ],
+   "mode_taken": null,
+   "refs": [
+    "W1",
+    "W4"
+   ],
+   "beat": "Penumbra Bobcat",
+   "note": "Its combat-damage trigger destroys an artifact or enchantment, which is the only repeatable answer in the deck to the taxing permanents that turn off attacking."
+  },
+  {
+   "name": "King of the Pride",
+   "count": 1,
+   "mana_cost": "{2}{W}",
+   "type_line": "Creature — Cat",
+   "package": "body_count",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W1",
+    "L3"
+   ],
+   "beat": "Felidar Sovereign"
+  },
+  {
+   "name": "Brimaz, King of Oreskos",
+   "count": 1,
+   "mana_cost": "{1}{W}{W}",
+   "type_line": "Legendary Creature — Cat Soldier",
+   "package": "body_count",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W1",
+    "L3"
+   ],
+   "beat": "Jedit Ojanen of Efrava"
+  },
+  {
+   "name": "Kutzil, Malamet Exemplar",
+   "count": 1,
+   "mana_cost": "{1}{G}{W}",
+   "type_line": "Legendary Creature — Cat Warrior",
+   "package": "body_count",
+   "roles_secondary": [
+    "refuel"
+   ],
+   "mode_taken": null,
+   "refs": [
+    "W4",
+    "L3"
+   ],
+   "beat": "Savannah Lions",
+   "note": "The printed text in the file stops opponents casting spells during my turn, which is the answer to the Fog problem that the pool otherwise lacks. Its draw trigger fires whenever creatures with power above base power connect, and the commander's anthem makes that condition true for the whole board."
+  },
+  {
+   "name": "Mirri, Weatherlight Duelist",
+   "count": 1,
+   "mana_cost": "{1}{G}{W}",
+   "type_line": "Legendary Creature — Cat Warrior",
+   "package": "body_count",
+   "roles_secondary": [
+    "damage_conversion"
+   ],
+   "mode_taken": null,
+   "refs": [
+    "W4",
+    "L3"
+   ],
+   "beat": "Fleecemane Lion"
+  },
+  {
+   "name": "Kaheera, the Orphanguard",
+   "count": 1,
+   "mana_cost": "{1}{G/W}{G/W}",
+   "type_line": "Legendary Creature — Cat Beast",
+   "package": "body_count",
+   "roles_secondary": [
+    "damage_conversion"
+   ],
+   "mode_taken": null,
+   "refs": [
+    "W1",
+    "L2"
+   ],
+   "beat": "Bronzehide Lion",
+   "note": "The restriction makes the companion condition true by construction, since a deck whose creature cards are Cats satisfies it. Kaheera is played here inside the 99; leaving this slot for another Cat and running her from outside the game is a real option and is set out in the pilot notes."
+  },
+  {
+   "name": "Regal Caracal",
+   "count": 1,
+   "mana_cost": "{3}{W}{W}",
+   "type_line": "Creature — Cat",
+   "package": "body_count",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W1",
+    "L3"
+   ],
+   "beat": "Penumbra Bobcat",
+   "note": "Three bodies on arrival, and the lifelink it hands out is what switches on the end-step trigger elsewhere in the deck."
+  },
+  {
+   "name": "Leonin Warleader",
+   "count": 1,
+   "mana_cost": "{2}{W}{W}",
+   "type_line": "Creature — Cat Soldier",
+   "package": "body_count",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W1",
+    "L3"
+   ],
+   "beat": "Felidar Sovereign"
+  },
+  {
+   "name": "Ajani's Chosen",
+   "count": 1,
+   "mana_cost": "{2}{W}{W}",
+   "type_line": "Creature — Cat Soldier",
+   "package": "body_count",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W1",
+    "L3"
+   ],
+   "beat": "Jedit Ojanen of Efrava"
+  },
+  {
+   "name": "Nacatl War-Pride",
+   "count": 1,
+   "mana_cost": "{3}{G}{G}{G}",
+   "type_line": "Creature — Cat Warrior",
+   "package": "body_count",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W1",
+    "L3"
+   ],
+   "beat": "Savannah Lions",
+   "note": "On attack it makes one tapped, attacking copy of itself for each creature the defender controls, and each copy inherits the must-be-blocked-by-exactly-one clause. It is the one card that takes the board from six to nine inside a combat step rather than across two turns."
+  },
+  {
+   "name": "Marisi, Breaker of the Coil",
+   "count": 1,
+   "mana_cost": "{1}{R}{G}{W}",
+   "type_line": "Legendary Creature — Cat Warrior",
+   "package": "body_count",
+   "roles_secondary": [
+    "damage_conversion"
+   ],
+   "mode_taken": null,
+   "refs": [
+    "W4",
+    "L3"
+   ],
+   "beat": "Fleecemane Lion",
+   "note": "Opponents cannot cast spells during combat, which protects the alpha strike from instant-speed answers. Goading their board afterwards is what keeps the third opponent occupied on the turn the deck cannot kill them."
+  },
+  {
+   "name": "Esika's Chariot",
+   "count": 1,
+   "mana_cost": "{3}{G}",
+   "type_line": "Legendary Artifact — Vehicle",
+   "package": "token_engines",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W1",
+    "W2"
+   ],
+   "beat": "Adagia, Windswept Bastion",
+   "note": "Two bodies on arrival and a copy of a token on each attack. Crew 4 is easy once the anthem tiers are running."
+  },
+  {
+   "name": "Felidar Retreat",
+   "count": 1,
+   "mana_cost": "{3}{W}",
+   "type_line": "Enchantment",
+   "package": "token_engines",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W1",
+    "W2"
+   ],
+   "beat": "God-Pharaoh's Gift"
+  },
+  {
+   "name": "Anointed Procession",
+   "count": 1,
+   "mana_cost": "{3}{W}",
+   "type_line": "Enchantment",
+   "package": "token_engines",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W1",
+    "L3"
+   ],
+   "beat": "Adagia, Windswept Bastion",
+   "note": "It creates no token on its own; it doubles what the rest of the package creates, which is why it sits here rather than in a support slot."
+  },
+  {
+   "name": "Caretaker's Talent",
+   "count": 1,
+   "mana_cost": "{2}{W}",
+   "type_line": "Enchantment — Class",
+   "package": "token_engines",
+   "roles_secondary": [
+    "refuel"
+   ],
+   "mode_taken": null,
+   "refs": [
+    "W1",
+    "W6"
+   ],
+   "beat": "God-Pharaoh's Gift"
+  },
+  {
+   "name": "Renewed Solidarity",
+   "count": 1,
+   "mana_cost": "{2}{W}",
+   "type_line": "Enchantment",
+   "package": "token_engines",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W1",
+    "W2"
+   ],
+   "beat": "Adagia, Windswept Bastion",
+   "note": "Naming Cat gives the team +1/+0 and copies each Cat token that entered that turn at end step, so it compounds with the doubler rather than repeating it."
+  },
+  {
+   "name": "Mirror March",
+   "count": 1,
+   "mana_cost": "{5}{R}",
+   "type_line": "Enchantment",
+   "package": "token_engines",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W1",
+    "L3"
+   ],
+   "beat": "God-Pharaoh's Gift",
+   "note": "The weakest slot in the deck: six mana, coin flips, and the tokens leave at the next end step. It is here because the pool holds four noncreature permanents that make Cat tokens and this package asked for six."
+  },
+  {
+   "name": "Teferi's Protection",
+   "count": 1,
+   "mana_cost": "{2}{W}",
+   "type_line": "Instant",
+   "package": "wipe_insurance",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W2",
+    "L2"
+   ],
+   "beat": "Everybody Lives!",
+   "note": "The permanents phase out, so the creature count drops to 0 while the shield is up. It saves the board from a sweeper; it does not let the board attack through one."
+  },
+  {
+   "name": "Heroic Intervention",
+   "count": 1,
+   "mana_cost": "{1}{G}",
+   "type_line": "Instant",
+   "package": "wipe_insurance",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W2",
+    "L2"
+   ],
+   "beat": "Duty Beyond Death"
+  },
+  {
+   "name": "Flare of Fortitude",
+   "count": 1,
+   "mana_cost": "{2}{W}{W}",
+   "type_line": "Instant",
+   "package": "wipe_insurance",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W2",
+    "L2"
+   ],
+   "beat": "Chance for Glory"
+  },
+  {
+   "name": "Make a Stand",
+   "count": 1,
+   "mana_cost": "{2}{W}",
+   "type_line": "Instant",
+   "package": "wipe_insurance",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W2",
+    "L3"
+   ],
+   "beat": "Everybody Lives!"
+  },
+  {
+   "name": "Your Temple Is Under Attack",
+   "count": 1,
+   "mana_cost": "{2}{W}",
+   "type_line": "Instant",
+   "package": "wipe_insurance",
+   "roles_secondary": [
+    "refuel"
+   ],
+   "mode_taken": null,
+   "refs": [
+    "W2",
+    "W6"
+   ],
+   "beat": "Duty Beyond Death"
+  },
+  {
+   "name": "Snakeskin Veil",
+   "count": 1,
+   "mana_cost": "{G}",
+   "type_line": "Instant",
+   "package": "commander_insurance",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W3",
+    "L2"
+   ],
+   "beat": "Emerge Unscathed"
+  },
+  {
+   "name": "Tamiyo's Safekeeping",
+   "count": 1,
+   "mana_cost": "{G}",
+   "type_line": "Instant",
+   "package": "commander_insurance",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W3",
+    "L2"
+   ],
+   "beat": "Sejiri Shelter // Sejiri Glacier"
+  },
+  {
+   "name": "Tyvar's Stand",
+   "count": 1,
+   "mana_cost": "{X}{G}",
+   "type_line": "Instant",
+   "package": "commander_insurance",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W3",
+    "L2"
+   ],
+   "beat": "Rebuff the Wicked"
+  },
+  {
+   "name": "Gods Willing",
+   "count": 1,
+   "mana_cost": "{W}",
+   "type_line": "Instant",
+   "package": "commander_insurance",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W3",
+    "L2"
+   ],
+   "beat": "Emerge Unscathed"
+  },
+  {
+   "name": "Jazal Goldmane",
+   "count": 1,
+   "mana_cost": "{2}{W}{W}",
+   "type_line": "Legendary Creature — Cat Warrior",
+   "package": "damage_conversion",
+   "roles_secondary": [
+    "body_count"
+   ],
+   "mode_taken": null,
+   "refs": [
+    "W4",
+    "L3"
+   ],
+   "beat": "Overrun",
+   "note": "The activated ability gives attacking creatures +X/+X where X is the number of attackers, so it scales with the same count the commander's tiers scale with. At eight attackers it is +8/+8 spread across the board."
+  },
+  {
+   "name": "Great Train Heist",
+   "count": 1,
+   "mana_cost": "{R}",
+   "type_line": "Instant",
+   "package": "damage_conversion",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W4",
+    "L3"
+   ],
+   "beat": "For the Emperor!"
+  },
+  {
+   "name": "Return of the Wildspeaker",
+   "count": 1,
+   "mana_cost": "{4}{G}",
+   "type_line": "Instant",
+   "package": "damage_conversion",
+   "roles_secondary": [
+    "refuel"
+   ],
+   "mode_taken": null,
+   "refs": [
+    "W4",
+    "L3"
+   ],
+   "beat": "Haze of Rage"
+  },
+  {
+   "name": "Makindi Stampede // Makindi Mesas",
+   "count": 1,
+   "mana_cost": "{3}{W}{W}",
+   "type_line": "Sorcery // Land",
+   "package": "damage_conversion",
+   "roles_secondary": [],
+   "mode_taken": "Makindi Stampede",
+   "refs": [
+    "W4",
+    "L3"
+   ],
+   "beat": "Overrun",
+   "note": "Taken as the sorcery. The land face is why it beat a strictly larger pump spell: a flooded hand can play it as a white source instead."
+  },
+  {
+   "name": "Impact Tremors",
+   "count": 1,
+   "mana_cost": "{1}{R}",
+   "type_line": "Enchantment",
+   "package": "damage_conversion",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W4",
+    "L5"
+   ],
+   "beat": "For the Emperor!",
+   "note": "One damage per body entering is small per trigger and large across a doubled token turn; it also kills through a Fog, which combat damage does not."
+  },
+  {
+   "name": "Lightning Greaves",
+   "count": 1,
+   "mana_cost": "{2}",
+   "type_line": "Artifact — Equipment",
+   "package": "damage_conversion",
+   "roles_secondary": [
+    "commander_insurance"
+   ],
+   "mode_taken": null,
+   "refs": [
+    "W3",
+    "L3"
+   ],
+   "beat": "Haze of Rage"
+  },
+  {
+   "name": "Biorhythm",
+   "count": 1,
+   "mana_cost": "{6}{G}{G}",
+   "type_line": "Sorcery",
+   "package": "damage_conversion",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W4",
+    "L4"
+   ],
+   "beat": "Overrun",
+   "note": "Each player's life total becomes their creature count, which is a one-sided ender at nine Cats against opponents holding one or two bodies. Eight mana is the price of the only non-combat kill in the pool."
+  },
+  {
+   "name": "Swords to Plowshares",
+   "count": 1,
+   "mana_cost": "{W}",
+   "type_line": "Instant",
+   "package": "interaction",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W4",
+    "L3"
+   ],
+   "beat": "Stroke of Midnight"
+  },
+  {
+   "name": "Path to Exile",
+   "count": 1,
+   "mana_cost": "{W}",
+   "type_line": "Instant",
+   "package": "interaction",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W4",
+    "L3"
+   ],
+   "beat": "Collective Resistance"
+  },
+  {
+   "name": "Beast Within",
+   "count": 1,
+   "mana_cost": "{2}{G}",
+   "type_line": "Instant",
+   "package": "interaction",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W4",
+    "L3"
+   ],
+   "beat": "Return to Nature",
+   "note": "Aim it at an opponent's permanent only. The token clause hands a 3/3 to the controller of what it destroys, so pointing it at my own permanent would put a non-Cat body on my board and break the restriction in play."
+  },
+  {
+   "name": "Generous Gift",
+   "count": 1,
+   "mana_cost": "{2}{W}",
+   "type_line": "Instant",
+   "package": "interaction",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W4",
+    "L3"
+   ],
+   "beat": "Stroke of Midnight",
+   "note": "Same referent trap as the other destroy-and-compensate answers: the Elephant goes to the controller of the destroyed permanent, so this stays aimed across the table."
+  },
+  {
+   "name": "Krosan Grip",
+   "count": 1,
+   "mana_cost": "{2}{G}",
+   "type_line": "Instant",
+   "package": "interaction",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W4",
+    "L3"
+   ],
+   "beat": "Collective Resistance"
+  },
+  {
+   "name": "Nature's Claim",
+   "count": 1,
+   "mana_cost": "{G}",
+   "type_line": "Instant",
+   "package": "interaction",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W4",
+    "L3"
+   ],
+   "beat": "Return to Nature"
+  },
+  {
+   "name": "Abrade",
+   "count": 1,
+   "mana_cost": "{1}{R}",
+   "type_line": "Instant",
+   "package": "interaction",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W4",
+    "L3"
+   ],
+   "beat": "Stroke of Midnight"
+  },
+  {
+   "name": "Garruk's Uprising",
+   "count": 1,
+   "mana_cost": "{2}{G}",
+   "type_line": "Enchantment",
+   "package": "refuel",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W6",
+    "L3"
+   ],
+   "beat": "Camaraderie",
+   "note": "Under the third tier a 1/1 token enters as a 4/1, so the power-four trigger fires on tokens and the enchantment becomes a draw engine rather than a trample grant."
+  },
+  {
+   "name": "Shamanic Revelation",
+   "count": 1,
+   "mana_cost": "{3}{G}{G}",
+   "type_line": "Sorcery",
+   "package": "refuel",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W6",
+    "L3"
+   ],
+   "beat": "Smuggler's Share"
+  },
+  {
+   "name": "Harmonize",
+   "count": 1,
+   "mana_cost": "{2}{G}{G}",
+   "type_line": "Sorcery",
+   "package": "refuel",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W6",
+    "L1"
+   ],
+   "beat": "Vanquisher's Banner"
+  },
+  {
+   "name": "Rishkar's Expertise",
+   "count": 1,
+   "mana_cost": "{4}{G}{G}",
+   "type_line": "Sorcery",
+   "package": "refuel",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W6",
+    "L3"
+   ],
+   "beat": "Camaraderie"
+  },
+  {
+   "name": "Skullclamp",
+   "count": 1,
+   "mana_cost": "{1}",
+   "type_line": "Artifact — Equipment",
+   "package": "refuel",
+   "roles_secondary": [
+    "damage_conversion"
+   ],
+   "mode_taken": null,
+   "refs": [
+    "W6",
+    "W2"
+   ],
+   "beat": "Smuggler's Share",
+   "note": "It draws two from a token that was about to be chaff, but each activation lowers the creature count the tiers are reading. Use it when the board is past nine or after a sweeper, not while climbing."
+  },
+  {
+   "name": "Sol Ring",
+   "count": 1,
+   "mana_cost": "{1}",
+   "type_line": "Artifact",
+   "package": "ramp",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W5",
+    "L1"
+   ],
+   "beat": "Commander's Sphere"
+  },
+  {
+   "name": "Arcane Signet",
+   "count": 1,
+   "mana_cost": "{2}",
+   "type_line": "Artifact",
+   "package": "ramp",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W5",
+    "L1"
+   ],
+   "beat": "Wayfarer's Bauble"
+  },
+  {
+   "name": "Rampant Growth",
+   "count": 1,
+   "mana_cost": "{1}{G}",
+   "type_line": "Sorcery",
+   "package": "ramp",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W5",
+    "L1"
+   ],
+   "beat": "Chromatic Lantern"
+  },
+  {
+   "name": "Nature's Lore",
+   "count": 1,
+   "mana_cost": "{1}{G}",
+   "type_line": "Sorcery",
+   "package": "ramp",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W5",
+    "L1"
+   ],
+   "beat": "Commander's Sphere"
+  },
+  {
+   "name": "Three Visits",
+   "count": 1,
+   "mana_cost": "{1}{G}",
+   "type_line": "Sorcery",
+   "package": "ramp",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W5",
+    "L1"
+   ],
+   "beat": "Wayfarer's Bauble"
+  },
+  {
+   "name": "Cultivate",
+   "count": 1,
+   "mana_cost": "{2}{G}",
+   "type_line": "Sorcery",
+   "package": "ramp",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W5",
+    "L1"
+   ],
+   "beat": "Chromatic Lantern"
+  },
+  {
+   "name": "Kodama's Reach",
+   "count": 1,
+   "mana_cost": "{2}{G}",
+   "type_line": "Sorcery — Arcane",
+   "package": "ramp",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W5",
+    "L1"
+   ],
+   "beat": "Commander's Sphere"
+  },
+  {
+   "name": "Mind Stone",
+   "count": 1,
+   "mana_cost": "{2}",
+   "type_line": "Artifact",
+   "package": "ramp",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W5",
+    "W6"
+   ],
+   "beat": "Wayfarer's Bauble"
+  },
+  {
+   "name": "Command Tower",
+   "count": 1,
+   "mana_cost": "",
+   "type_line": "Land",
+   "package": "lands_nonbasic",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W5",
+    "L2"
+   ],
+   "beat": "Evolving Wilds"
+  },
+  {
+   "name": "Jetmir's Garden",
+   "count": 1,
+   "mana_cost": "",
+   "type_line": "Land — Mountain Forest Plains",
+   "package": "lands_nonbasic",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W5",
+    "L2"
+   ],
+   "beat": "Windswept Heath"
+  },
+  {
+   "name": "Jungle Shrine",
+   "count": 1,
+   "mana_cost": "",
+   "type_line": "Land",
+   "package": "lands_nonbasic",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W5",
+    "L2"
+   ],
+   "beat": "Rogue's Passage"
+  },
+  {
+   "name": "Exotic Orchard",
+   "count": 1,
+   "mana_cost": "",
+   "type_line": "Land",
+   "package": "lands_nonbasic",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W5",
+    "L2"
+   ],
+   "beat": "Mossfire Valley"
+  },
+  {
+   "name": "Path of Ancestry",
+   "count": 1,
+   "mana_cost": "",
+   "type_line": "Land",
+   "package": "lands_nonbasic",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W5",
+    "L1"
+   ],
+   "beat": "Spectator Seating"
+  },
+  {
+   "name": "Clifftop Retreat",
+   "count": 1,
+   "mana_cost": "",
+   "type_line": "Land",
+   "package": "lands_nonbasic",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W5",
+    "L2"
+   ],
+   "beat": "Radiant Grove"
+  },
+  {
+   "name": "Rootbound Crag",
+   "count": 1,
+   "mana_cost": "",
+   "type_line": "Land",
+   "package": "lands_nonbasic",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W5",
+    "L2"
+   ],
+   "beat": "Evolving Wilds"
+  },
+  {
+   "name": "Sunpetal Grove",
+   "count": 1,
+   "mana_cost": "",
+   "type_line": "Land",
+   "package": "lands_nonbasic",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W5",
+    "L2"
+   ],
+   "beat": "Windswept Heath"
+  },
+  {
+   "name": "Canopy Vista",
+   "count": 1,
+   "mana_cost": "",
+   "type_line": "Land — Forest Plains",
+   "package": "lands_nonbasic",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W5",
+    "L2"
+   ],
+   "beat": "Rogue's Passage"
+  },
+  {
+   "name": "Cinder Glade",
+   "count": 1,
+   "mana_cost": "",
+   "type_line": "Land — Mountain Forest",
+   "package": "lands_nonbasic",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W5",
+    "L2"
+   ],
+   "beat": "Mossfire Valley"
+  },
+  {
+   "name": "Battlefield Forge",
+   "count": 1,
+   "mana_cost": "",
+   "type_line": "Land",
+   "package": "lands_nonbasic",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W5",
+    "L2"
+   ],
+   "beat": "Spectator Seating"
+  },
+  {
+   "name": "Hushwood Verge",
+   "count": 1,
+   "mana_cost": "",
+   "type_line": "Land",
+   "package": "lands_nonbasic",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W5",
+    "L2"
+   ],
+   "beat": "Radiant Grove"
+  },
+  {
+   "name": "Fortified Village",
+   "count": 1,
+   "mana_cost": "",
+   "type_line": "Land",
+   "package": "lands_nonbasic",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W5",
+    "L2"
+   ],
+   "beat": "Evolving Wilds"
+  },
+  {
+   "name": "Game Trail",
+   "count": 1,
+   "mana_cost": "",
+   "type_line": "Land",
+   "package": "lands_nonbasic",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W5",
+    "L2"
+   ],
+   "beat": "Windswept Heath"
+  },
+  {
+   "name": "Furycalm Snarl",
+   "count": 1,
+   "mana_cost": "",
+   "type_line": "Land",
+   "package": "lands_nonbasic",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W5",
+    "L2"
+   ],
+   "beat": "Rogue's Passage"
+  },
+  {
+   "name": "Branchloft Pathway // Boulderloft Pathway",
+   "count": 1,
+   "mana_cost": "",
+   "type_line": "Land // Land",
+   "package": "lands_nonbasic",
+   "roles_secondary": [],
+   "mode_taken": "Branchloft Pathway",
+   "refs": [
+    "W5",
+    "L2"
+   ],
+   "beat": "Mossfire Valley"
+  },
+  {
+   "name": "Cragcrown Pathway // Timbercrown Pathway",
+   "count": 1,
+   "mana_cost": "",
+   "type_line": "Land // Land",
+   "package": "lands_nonbasic",
+   "roles_secondary": [],
+   "mode_taken": "Timbercrown Pathway",
+   "refs": [
+    "W5",
+    "L2"
+   ],
+   "beat": "Spectator Seating"
+  },
+  {
+   "name": "Rugged Prairie",
+   "count": 1,
+   "mana_cost": "",
+   "type_line": "Land",
+   "package": "lands_nonbasic",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W5",
+    "L2"
+   ],
+   "beat": "Radiant Grove"
+  },
+  {
+   "name": "Spire Garden",
+   "count": 1,
+   "mana_cost": "",
+   "type_line": "Land",
+   "package": "lands_nonbasic",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W5",
+    "L2"
+   ],
+   "beat": "Evolving Wilds"
+  },
+  {
+   "name": "Sheltered Thicket",
+   "count": 1,
+   "mana_cost": "",
+   "type_line": "Land — Mountain Forest",
+   "package": "lands_nonbasic",
+   "roles_secondary": [
+    "refuel"
+   ],
+   "mode_taken": null,
+   "refs": [
+    "W5",
+    "L1"
+   ],
+   "beat": "Windswept Heath"
+  },
+  {
+   "name": "Three Tree City",
+   "count": 1,
+   "mana_cost": "",
+   "type_line": "Legendary Land",
+   "package": "lands_nonbasic",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W5",
+    "L3"
+   ],
+   "beat": "Rogue's Passage",
+   "note": "Naming Cat turns the board into mana: two and a tap yields one coloured mana per Cat, which is what pays for the commander's second and third casts."
+  },
+  {
+   "name": "Secluded Courtyard",
+   "count": 1,
+   "mana_cost": "",
+   "type_line": "Land",
+   "package": "lands_nonbasic",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W5",
+    "L1"
+   ],
+   "beat": "Mossfire Valley"
+  },
+  {
+   "name": "Second Harvest",
+   "count": 1,
+   "mana_cost": "{2}{G}{G}",
+   "type_line": "Instant",
+   "package": "flex",
+   "roles_secondary": [],
+   "mode_taken": null,
+   "refs": [
+    "W1",
+    "L3"
+   ],
+   "beat": "Waiting in the Weeds",
+   "note": "At instant speed it doubles the token half of the board, which is how a board of five becomes a board of nine before blockers are declared."
+  },
+  {
+   "name": "Smothering Tithe",
+   "count": 1,
+   "mana_cost": "{3}{W}",
+   "type_line": "Enchantment",
+   "package": "flex",
+   "roles_secondary": [
+    "ramp"
+   ],
+   "mode_taken": null,
+   "refs": [
+    "W5",
+    "W6"
+   ],
+   "beat": "Firecat Blitz",
+   "note": "The Treasures pay for the commander's tax spiral and for a Jazal activation in the same turn as a threshold-crossing token burst."
+  }
+ ],
+ "bench": [
+  {
+   "name": "Jedit Ojanen of Efrava",
+   "package": "body_count",
+   "lost_to": "Nacatl War-Pride",
+   "reason": "Six mana for one 2/2 per attack, and a second triple-green cost the mana base can support once, not twice."
+  },
+  {
+   "name": "Savannah Lions",
+   "package": "body_count",
+   "lost_to": "Wild Nacatl",
+   "reason": "Same slot, same cost, smaller ceiling: Wild Nacatl is a 3/3 once a Mountain and a Plains are down."
+  },
+  {
+   "name": "Fleecemane Lion",
+   "package": "body_count",
+   "lost_to": "Qasali Pridemage",
+   "reason": "A better attacker on its own, but Qasali answers the taxing enchantment that turns off the attack step."
+  },
+  {
+   "name": "Bronzehide Lion",
+   "package": "body_count",
+   "lost_to": "Kaheera, the Orphanguard",
+   "reason": "Resilient, but one body; Kaheera is a body plus a statwide anthem with vigilance."
+  },
+  {
+   "name": "Penumbra Bobcat",
+   "package": "body_count",
+   "lost_to": "Prideful Parent",
+   "reason": "Two bodies spread over a death trigger instead of two bodies on arrival."
+  },
+  {
+   "name": "Felidar Sovereign",
+   "package": "body_count",
+   "lost_to": "Regal Caracal",
+   "reason": "Six mana for one body and a life-total win that this board is too fast to wait for."
+  },
+  {
+   "name": "Adagia, Windswept Bastion",
+   "package": "token_engines",
+   "lost_to": "Esika's Chariot",
+   "reason": "Copies artifacts and enchantments rather than creatures, and only after twelve charge counters."
+  },
+  {
+   "name": "God-Pharaoh's Gift",
+   "package": "token_engines",
+   "lost_to": "Mirror March",
+   "reason": "The token it makes is a Zombie rather than a Cat, so it fails the restriction in play even though the pool filter reads its copy clause as exempt."
+  },
+  {
+   "name": "Everybody Lives!",
+   "package": "wipe_insurance",
+   "lost_to": "Make a Stand",
+   "reason": "Stops the sweeper, and also stops my own attack from finishing anyone that turn."
+  },
+  {
+   "name": "Duty Beyond Death",
+   "package": "wipe_insurance",
+   "lost_to": "Flare of Fortitude",
+   "reason": "Costs a creature up front, which is the resource the thresholds are counting."
+  },
+  {
+   "name": "Chance for Glory",
+   "package": "wipe_insurance",
+   "lost_to": "Teferi's Protection",
+   "reason": "Saves the board and then loses the game at the next end step unless it also wins."
+  },
+  {
+   "name": "Emerge Unscathed",
+   "package": "commander_insurance",
+   "lost_to": "Gods Willing",
+   "reason": "Rebound is slower than the scry, and one colour of protection is the same coverage."
+  },
+  {
+   "name": "Sejiri Shelter // Sejiri Glacier",
+   "package": "commander_insurance",
+   "lost_to": "Snakeskin Veil",
+   "reason": "Flexible as a land, but two mana rather than one on the turn Jetmir is exposed."
+  },
+  {
+   "name": "Rebuff the Wicked",
+   "package": "commander_insurance",
+   "lost_to": "Tamiyo's Safekeeping",
+   "reason": "Answers a spell but not an activated ability or a sweeper."
+  },
+  {
+   "name": "Overrun",
+   "package": "damage_conversion",
+   "lost_to": "Return of the Wildspeaker",
+   "reason": "Bigger swing, but a third triple-green card in a mana base that leans white."
+  },
+  {
+   "name": "For the Emperor!",
+   "package": "damage_conversion",
+   "lost_to": "Makindi Stampede // Makindi Mesas",
+   "reason": "Comparable pump at sorcery speed with no land face to fall back on."
+  },
+  {
+   "name": "Haze of Rage",
+   "package": "damage_conversion",
+   "lost_to": "Impact Tremors",
+   "reason": "Buyback is a mana sink, but +1/+0 is below what the anthem tiers already supply."
+  },
+  {
+   "name": "Stroke of Midnight",
+   "package": "interaction",
+   "lost_to": "Generous Gift",
+   "reason": "Same shape, one type narrower, and it hands the opponent a flier."
+  },
+  {
+   "name": "Collective Resistance",
+   "package": "interaction",
+   "lost_to": "Nature's Claim",
+   "reason": "Escalate is flexible at four or five mana; the plan wants the answer at one."
+  },
+  {
+   "name": "Return to Nature",
+   "package": "interaction",
+   "lost_to": "Krosan Grip",
+   "reason": "Split second is what makes the answer stick against a held response."
+  },
+  {
+   "name": "Camaraderie",
+   "package": "refuel",
+   "lost_to": "Shamanic Revelation",
+   "reason": "Six mana against five for a similar draw, and the life matters less than the tempo."
+  },
+  {
+   "name": "Smuggler's Share",
+   "package": "refuel",
+   "lost_to": "Skullclamp",
+   "reason": "Refuels on the opponents' clock rather than mine."
+  },
+  {
+   "name": "Vanquisher's Banner",
+   "package": "refuel",
+   "lost_to": "Harmonize",
+   "reason": "Five mana before it draws anything, and it draws only on a Cat cast."
+  },
+  {
+   "name": "Commander's Sphere",
+   "package": "ramp",
+   "lost_to": "Mind Stone",
+   "reason": "One mana more for the same ramp-then-cantrip shape."
+  },
+  {
+   "name": "Wayfarer's Bauble",
+   "package": "ramp",
+   "lost_to": "Rampant Growth",
+   "reason": "Three mana in total for the same tapped basic."
+  },
+  {
+   "name": "Chromatic Lantern",
+   "package": "ramp",
+   "lost_to": "Arcane Signet",
+   "reason": "Fixes better, but three mana is off the curve this package is buying."
+  },
+  {
+   "name": "Evolving Wilds",
+   "package": "lands_nonbasic",
+   "lost_to": "Command Tower",
+   "reason": "Produces no mana of the three colours on the turn it is played, so it fails this package's criterion."
+  },
+  {
+   "name": "Windswept Heath",
+   "package": "lands_nonbasic",
+   "lost_to": "Sunpetal Grove",
+   "reason": "Fetches a typed dual and triggers landfall twice, but produces no mana itself."
+  },
+  {
+   "name": "Rogue's Passage",
+   "package": "lands_nonbasic",
+   "lost_to": "Three Tree City",
+   "reason": "Makes one attacker unblockable, but adds colourless only."
+  },
+  {
+   "name": "Mossfire Valley",
+   "package": "lands_nonbasic",
+   "lost_to": "Spire Garden",
+   "reason": "Two colours for two mana rather than one."
+  },
+  {
+   "name": "Spectator Seating",
+   "package": "lands_nonbasic",
+   "lost_to": "Furycalm Snarl",
+   "reason": "Equivalent red-white land; the Snarl can enter untapped from a revealed card rather than from opponent count."
+  },
+  {
+   "name": "Radiant Grove",
+   "package": "lands_nonbasic",
+   "lost_to": "Fortified Village",
+   "reason": "Enters tapped without a condition that lets it enter untapped."
+  },
+  {
+   "name": "Waiting in the Weeds",
+   "package": "flex",
+   "lost_to": "Second Harvest",
+   "reason": "Needs untapped Forests at sorcery speed, and hands the table Cats as well."
+  },
+  {
+   "name": "Firecat Blitz",
+   "package": "flex",
+   "lost_to": "Smothering Tithe",
+   "reason": "The tokens are sacrificed at end of turn, so they buy one combat and no threshold afterwards."
+  }
+ ],
+ "basics": {
+  "Plains": 6,
+  "Forest": 4,
+  "Mountain": 2
+ },
+ "weak_slots": [
+  "Mirror March",
+  "Nacatl War-Pride",
+  "Biorhythm",
+  "Skullclamp"
+ ],
+ "brief": {
+  "how_it_wins": "The deck wins by attacking with a wide board of Cats while the commander is out. Three creatures gives the team +1/+0 and vigilance, six adds another +1/+0 and trample, nine adds a third +1/+0 and double strike. A 1/1 Cat token then connects for eight, so eight attackers deal 64 - enough for two opponents on turn seven, when a life total that began at 40 has drifted toward 24. First backup: [[Jazal Goldmane]], whose ability gives attacking creatures +X/+X for X attackers, turning a board of six into a kill without the third tier. Second backup: [[Biorhythm]], which sets each player's life total to their creature count - eight mana, but it sidesteps blockers and damage prevention, which the primary plan cannot.",
+  "the_line": "Turns one to three: noncreature ramp ([[Sol Ring]], [[Mind Stone]], the green land-fetchers) plus cheap Cats - [[Ocelot Pride]], [[Sacred Cat]], [[Wild Nacatl]]. Turn four: the commander, with [[Snakeskin Veil]] held up. Turn five: a multiplier - [[Arahbo, the First Fang]], [[Esika's Chariot]] or [[Felidar Retreat]]. Turn six: push toward nine with [[Regal Caracal]], [[Leonin Warleader]] or [[Second Harvest]]. Turn seven is the commit turn - answer the permanent that blanks the attack, cross nine, swing. Turn eight follows up, where [[Nacatl War-Pride]] pays for itself: one tapped attacking copy per creature the defender controls.",
+  "against": "What beats this deck is repeated sweepers plus a taxing enchantment: each sweeper costs several cards at once, and a tax charging per attacker charges eight times over. Hold [[Heroic Intervention]] or [[Make a Stand]] rather than deploying into open mana, and save [[Krosan Grip]] for the enchantment. A board of small Cats looks harmless, and until the third tier switches on this reads as the weakest deck at the table - trade on that. It stops looking harmless when the sixth creature lands and trample appears.",
+  "pilot": "Mulligan: keep two lands with two plays before turn three, or three lands with one multiplier; ship one-landers. Count bodies, not power - cast the cheap Cat first. Tokens arriving tapped and attacking raise the count immediately, so [[Leonin Warleader]] and [[Nacatl War-Pride]] can cross a threshold inside their own combat. [[Skullclamp]] works against the plan while the board climbs; hold it until past nine or after a sweeper. The destroy-and-compensate answers hand a token to the controller of what they destroy, so point them across the table - a token from one would be a non-Cat body and would break the restriction in play. The commander has no targeted ability; the land decision is what the green tutors fetch - a Forest-typed dual such as [[Canopy Vista]] over a basic when white or red is short. Finally, [[Kaheera, the Orphanguard]] meets its companion condition automatically here; moving her outside the 99 gains a card at the cost of this slot."
+ }
+}
