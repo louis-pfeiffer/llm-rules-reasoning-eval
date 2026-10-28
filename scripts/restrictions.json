@@ -1,0 +1,66 @@
+{
+ "none": {
+  "statement": "No restriction beyond Commander legality and colour identity.",
+  "allow_types": [],
+  "forbid_types": [],
+  "always_legal": []
+ },
+ "no-nonland-permanents": {
+  "statement": "The 99 may contain no non-land permanents. A face containing Land is legal whatever else it contains.",
+  "allow_types": [
+   "Instant",
+   "Sorcery",
+   "Land"
+  ],
+  "forbid_types": [],
+  "always_legal": [
+   "Land"
+  ]
+ },
+ "no-creatures": {
+  "statement": "The 99 may contain no creature cards. Every other type is legal.",
+  "forbid_types": [
+   "Creature"
+  ],
+  "always_legal": []
+ },
+ "spells-only": {
+  "statement": "The 99 may contain no permanents at all, lands included.",
+  "allow_types": [
+   "Instant",
+   "Sorcery"
+  ],
+  "always_legal": []
+ },
+ "no-artifacts": {
+  "statement": "The 99 may contain no artifact cards, including artifact lands.",
+  "forbid_types": [
+   "Artifact"
+  ],
+  "always_legal": []
+ },
+ "budget-5": {
+  "statement": "No card in the 99 may exceed USD 5.00 on the fingerprint's capture date. Basics are exempt (C3).",
+  "max_usd": 5.0,
+  "always_legal": [],
+  "note": "Row-level predicate on usd, applied by prep.row_ok."
+ },
+ "cmc-3-or-less": {
+  "statement": "No card in the 99 may have mana value greater than 3. Lands are exempt.",
+  "max_cmc": 3,
+  "exempt_types": [
+   "Land"
+  ],
+  "note": "Row-level predicate on cmc, applied by prep.row_ok."
+ },
+ "cats-only-creatures": {
+  "statement": "Every creature card in the 99 must be a Cat: a face that is a Creature must list the subtype Cat on its printed type line, so changelings fail (their printed line reads Shapeshifter). In addition, every creature token the card creates under YOUR control must be a Cat; clauses that hand tokens to another player are exempt, and noncreature tokens (Treasure, Food, Clue) are unaffected. Only cards in the collection are eligible.",
+  "require_subtype_for_type": {
+   "Creature": [
+    "Cat"
+   ]
+  },
+  "always_legal": [],
+  "token_creature_subtype": "Cat"
+ }
+}
