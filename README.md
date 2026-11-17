@@ -98,7 +98,7 @@ source .venv/bin/activate        # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-Two inputs are third-party and are not redistributed here: the Scryfall card data
+Two inputs are third-party and are not redistributed here: the full Scryfall card dataset
 and the comprehensive rules. [`data/README.md`](data/README.md) says where to get
 them. Note that fetching the Scryfall data is not housekeeping — grounding every
 card claim in it is the project's central design decision, as finding 1 describes.
@@ -126,7 +126,7 @@ Nothing here should be read as a general claim about model capability.
 
 Code under the [MIT Licence](LICENSE). Card data from
 [Scryfall](https://scryfall.com); comprehensive rules published by Wizards of the
-Coast. Neither is redistributed here.
+Coast. The annotated collection includes card text from Scryfall, but neither the full Scryfall dataset nor the rules are redistributed here.
 
 Unofficial fan project. Not produced by, endorsed by, supported by, or affiliated
 with Wizards of the Coast.
